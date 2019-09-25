@@ -7,11 +7,11 @@
     align-content: @alignContent;
 }
 
-.button(@bgcolor, @fontcolor) {
+.button(@bgcolor, @fontcolor, @width) {
     background: @bgcolor;
     color: @fontcolor;
     height: 4.5rem;
-    width: 85%;
+    width: @width;
     font-size: 2rem;
     border-radius: 1.2rem;
     .flexbox(row, center, center, center)
