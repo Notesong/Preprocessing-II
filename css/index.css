@@ -164,9 +164,31 @@ img {
   height: auto;
 }
 .container {
+  width: 100%;
+}
+main,
+#nav-header {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+}
+#main-nav {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  align-content: center;
+}
+#main-nav nav {
+  margin: 6rem 0 3rem 0;
+}
+#main-nav nav a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 0 1.5rem;
 }
 .footer {
   width: 100%;
@@ -178,6 +200,19 @@ img {
   color: #212529;
   font-size: 1.6rem;
   padding: 20px;
+}
+.home #main-header hr {
+  width: 100%;
+  border-bottom: 2px dashed #C0C0C0;
+  border-top: none;
+}
+.home #main-header #main-header-content {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+.home #main-header img {
+  margin-bottom: 2rem;
 }
 .home .content-section {
   margin: 30px 0;
