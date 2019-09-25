@@ -42,7 +42,7 @@
 
   .inverse-content {
     padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
+    border-bottom: @borderDashed;
 
     .text-content {
       padding-left: 1%;
@@ -66,7 +66,7 @@
 
   .content-pick {
     padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
+    border-top: @borderDashed;
     display: flex;
     justify-content: space-between;
 
@@ -75,7 +75,7 @@
       margin-bottom: 30px;
     }
     .btn {
-      
+      .button(@eastern-blue, @white);
     }
   }
 }// home

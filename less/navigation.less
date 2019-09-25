@@ -4,14 +4,30 @@
     width: 100%;
     margin: 0 auto;
     .flexbox(row, space-between, baseline, center);
+    @media only screen and (@mobileWidth) {
+        .flexbox(column, center, center, center);
+    }
 
+    h1 {
+        @media only screen and (@mobileWidth) {
+            margin: 1.5rem 0;
+        }
+    }
     nav {
         margin: 6rem 0 3rem 0;
+        @media only screen and (@mobileWidth) {
+            .flexbox(row, space-around, baseline, center);
+            width: 100%;
+            margin: 0;
+        }
 
         a {
             font-size: 1.5rem;
             text-decoration: none;
             padding: 0 1.5rem;
+            @media only screen and (@mobileWidth) {
+                padding: 0;
+            }
         }
     }
 }

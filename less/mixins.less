@@ -6,3 +6,13 @@
     align-items: @alignItems;
     align-content: @alignContent;
 }
+
+.button(@bgcolor, @fontcolor) {
+    background: @bgcolor;
+    color: @fontcolor;
+    height: 4.5rem;
+    width: 85%;
+    font-size: 2rem;
+    border-radius: 1.2rem;
+    .flexbox(row, center, center, center)
+}
