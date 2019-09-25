@@ -10,9 +10,13 @@
 .button(@bgcolor, @fontcolor, @width) {
     background: @bgcolor;
     color: @fontcolor;
-    height: 4.5rem;
     width: @width;
+    height: 4.5rem;
     font-size: 2rem;
     border-radius: 1.2rem;
-    .flexbox(row, center, center, center)
+    .flexbox(row, center, center, center);
+
+    &:hover {
+        background: darken(@eastern-blue, 20%);
+    }
 }
