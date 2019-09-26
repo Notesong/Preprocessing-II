@@ -22,27 +22,33 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    @media only screen and (@mobileWidth) {
+    @media @mobileMQ {
       .flexbox(column, center, center, center);
     }   
     
     .text-content {
       width: 48%;
       padding-right: 1%;
-      @media only screen and (@mobileWidth) {
+      @media @mobileMQ {
         width: 100%;
+        padding: 0;
       } 
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
-      @media only screen and (@mobileWidth) {
+      @media @mobileMQ {
         width: 100%;
+        padding: 0;
       } 
 
       img {
         border-radius: 10px;
+        @media @mobileMQ {
+          width: 100%;
+          padding: 0;
+        }
       }
     }
   }
@@ -50,25 +56,31 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: @borderDashed;
-    @media only screen and (@mobileWidth) {
+    @media @mobileMQ {
       .flexbox(column-reverse, center, center, center);
     } 
 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      @media @mobileMQ {
+        padding: 0;
+      } 
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      @media @mobileMQ {
+        padding: 0;
+      } 
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
-    @media only screen and (@mobileWidth) {
+    @media @tabletMQ {
       width: 100%;
     } 
 
@@ -82,20 +94,24 @@
     border-top: @borderDashed;
     display: flex;
     justify-content: space-between;
-    @media only screen and (@mobileWidth) {
+    @media @tabletMQ {
       .flexbox(column, center, center, center);
     } 
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
-      @media only screen and (@mobileWidth) {
+      @media @tabletMQ {
         width: 80%;
       } 
     }
     .btn {
       .button(@eastern-blue, @white, 85%);
-      @media only screen and (@mobileWidth) {
+      @media @tabletMQ {
+        .button(@eastern-blue, @white, 50%);
+        margin: 1rem auto 5rem auto;
+      }
+      @media @mobileMQ {
         .button(@eastern-blue, @white, 100%);
       }
     }

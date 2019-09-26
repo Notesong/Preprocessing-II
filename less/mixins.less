@@ -16,7 +16,13 @@
     border-radius: 1.2rem;
     .flexbox(row, center, center, center);
 
+    @keyframes buttonAni {
+        from {background: @bgcolor;}
+        to {background: darken(@bgcolor, 20%);}
+    }
+
     &:hover {
-        background: darken(@bgcolor, 20%);
+        animation-name: buttonAni;
+        animation-duration: 1s;
     }
 }

@@ -4,19 +4,19 @@
     width: 100%;
     margin: 0 auto;
     .flexbox(row, space-between, baseline, center);
-    @media only screen and (@mobileWidth) {
+    @media @mobileMQ {
         .flexbox(column, center, center, center);
     }
 
     h1 {
-        @media only screen and (@mobileWidth) {
+        @media @mobileMQ {
             margin: 1.5rem 0;
             font-size: 3.2rem;
         }
     }
     nav {
         margin: 6rem 0 3rem 0;
-        @media only screen and (@mobileWidth) {
+        @media @mobileMQ {
             .flexbox(row, space-around, baseline, center);
             width: 100%;
             margin: 0;
@@ -27,7 +27,7 @@
             text-decoration: none;
             padding: 0 1.5rem;
             color: @shark;
-            @media only screen and (@mobileWidth) {
+            @media @mobileMQ {
                 padding: 0;
             }
         }
