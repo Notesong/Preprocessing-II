@@ -1,46 +1,88 @@
 .home {
 
+  #main-header {
+    hr {
+      width: 100%;
+      border-bottom: @borderDashed;
+      border-top: none;
+    }
+    #main-header-content {
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    img {
+      margin-bottom: 2rem;
+    }
+  }
+
+
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
+    @media @mobileMQ {
+      .flexbox(column, center, center, center);
+    }   
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobileMQ {
+        width: 100%;
+        padding: 0;
+      } 
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @mobileMQ {
+        width: 100%;
+        padding: 0;
+      } 
 
       img {
         border-radius: 10px;
+        @media @mobileMQ {
+          width: 100%;
+          padding: 0;
+        }
       }
     }
   }
 
   .inverse-content {
     padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
+    border-bottom: @borderDashed;
+    @media @mobileMQ {
+      .flexbox(column-reverse, center, center, center);
+    } 
 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      @media @mobileMQ {
+        padding: 0;
+      } 
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      @media @mobileMQ {
+        padding: 0;
+      } 
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media @tabletMQ {
+      width: 100%;
+    } 
 
     img {
       border-radius: 10px;
@@ -49,13 +91,29 @@
 
   .content-pick {
     padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
+    border-top: @borderDashed;
     display: flex;
     justify-content: space-between;
+    @media @tabletMQ {
+      .flexbox(column, center, center, center);
+    } 
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @tabletMQ {
+        width: 80%;
+      } 
+    }
+    .btn {
+      .button(@eastern-blue, @white, 85%);
+      @media @tabletMQ {
+        .button(@eastern-blue, @white, 50%);
+        margin: 1rem auto 5rem auto;
+      }
+      @media @mobileMQ {
+        .button(@eastern-blue, @white, 100%);
+      }
     }
   }
 }// home

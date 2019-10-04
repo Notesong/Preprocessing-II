@@ -1,1 +1,35 @@
 // Navigation Styles here
+#main-nav {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    .flexbox(row, space-between, baseline, center);
+    @media @mobileMQ {
+        .flexbox(column, center, center, center);
+    }
+
+    h1 {
+        @media @mobileMQ {
+            margin: 1.5rem 0;
+            font-size: 3.2rem;
+        }
+    }
+    nav {
+        margin: 6rem 0 3rem 0;
+        @media @mobileMQ {
+            .flexbox(row, space-around, baseline, center);
+            width: 100%;
+            margin: 0;
+        }
+
+        a {
+            font-size: 1.5rem;
+            text-decoration: none;
+            padding: 0 1.5rem;
+            color: @shark;
+            @media @mobileMQ {
+                padding: 0;
+            }
+        }
+    }
+}
